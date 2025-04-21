@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Aprendizado</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      width: 220px;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      overflow-y: auto;
+    }
+
+    aside h2 {
+      margin-bottom: 15px;
+    }
+
+    aside ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    aside ul li {
+      margin-bottom: 10px;
+    }
+
+    aside ul li a {
+      color: #ecf0f1;
+      text-decoration: none;
+    }
+
+    main {
+      margin-left: 240px;
+      padding: 40px 20px;
+      flex: 1;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #3498db;
+      color: white;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #34495e;
+      color: white;
+      margin-top: 30px;
+      border-radius: 8px;
+    }
+
+      @media (max-width: 768px) {}
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        position: static;
+        height: auto;
+      }
+
+      main {
+        margin-left: 0;
+      }
+      h1 {
+  -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    transform: translateZ(-700px);
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    transform: translateZ(-700px);
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+    transform: translateZ(0);
+  }
+      
+
+    }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="#introducao">Introdução</a></li>
+      <li><a href="#jornada">Minha Jornada</a></li>
+      <li><a href="#conteudo">Conteúdo</a></li>
+      <li><a href="#conclusao">Conclusão</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Tabela de Aprendizado</h1>
+    </header>
+
+    <section id="introducao">
+      <h2>Introdução</h2>
+      <p>Olá! Me chamo André Luz, tenho 18 anos e estou em processo de formação em Análise e Desenvolvimento de Sistemas. Estou constantemente em busca de crescimento, aprimorando minhas habilidades e enfrentando novos desafios com dedicação.</p>
+      <p>Atualmente, me dedico à criação de sites, com foco em HTML, CSS e JavaScript. Meu objetivo é sempre evoluir como desenvolvedor e transformar ideias em soluções reais e funcionais.</p>
+    </section>
+
+    <section id="jornada">
+      <h2>Minha Jornada na Programação: Da Curiosidade à Construção de Projetos Reais</h2>
+      <p>Olá! Me chamo <strong>André Luz</strong>, tenho 18 anos e atualmente estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong>. A minha história com a programação começou de forma simples: através da curiosidade. Sempre fui fascinado por tecnologia e, em um certo momento, quis entender como os sites e aplicativos que eu usava todos os dias eram criados.</p>
+
+      <p>Comecei meus estudos por conta própria, utilizando a internet como aliada. Sites, vídeos, fóruns, tutoriais... tudo servia de base para minha aprendizagem. Logo descobri o <strong>HTML</strong> e o <strong>CSS</strong>, as ferramentas que dão forma e estilo às páginas da web. No início, cada pequena conquista – como alinhar um texto ou mudar a cor de um botão – já era uma grande vitória.</p>
+
+      <p>Com o tempo, percebi que só a estrutura e o estilo não eram suficientes. Queria que as páginas respondessem ao usuário, que tivessem interação. Foi aí que entrei no mundo do <strong>JavaScript</strong>, e tudo começou a fazer mais sentido. A lógica por trás das ações, os eventos, as condições... tudo se conectava com o que eu queria construir.</p>
+
+      <p>Decidi então começar a aplicar esse conhecimento em projetos reais. Um dos meus projetos, juntamente com amigos com os mesmos sonhos, é fundar a <strong>LusTech Solutions</strong>, uma empresa especializada em soluções para empresas de pequeno, médio e grande porte. Nosso foco também será oferecer cursos acessíveis para a comunidade e apoiar o crescimento da internet e da rede de programação.</p>
+
+      <p>Estou em busca de uma <strong>oportunidade de emprego definitiva</strong>, com o desejo de contribuir para o crescimento de uma empresa, aprimorar minhas habilidades e aprender com profissionais experientes do mercado. Tenho dedicação, disciplina e muita vontade de crescer nessa área.</p>
+
+      <p>Recentemente, coloquei meus conhecimentos em prática criando o site <strong>"Lanche do Luz"</strong>, uma lanchonete especializada em porções e petiscos com pedidos via WhatsApp. 🚀 Nesse projeto, desenvolvi uma solução prática e funcional para facilitar os pedidos dos clientes. 🍔</p>
+
+      <p>Utilizei <strong>HTML5</strong>, <strong>CSS3</strong> e <strong>JavaScript</strong> para criar um site totalmente responsivo, com uma interface clara, moderna e adaptável a qualquer dispositivo. O usuário consegue selecionar os produtos, visualizar o total da compra e, com apenas um clique, enviar o pedido automaticamente pelo WhatsApp.</p>
+
+      <p>Implementei recursos como <strong>barra lateral fixa</strong>, botões interativos, rolagem suave e elementos visuais bem posicionados usando <strong>Flexbox</strong> e <strong>Media Queries</strong>. Toda a estrutura foi construída com semântica, usando tags como <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> e <code>&lt;footer&gt;</code>.</p>
+
+      <p>Esse projeto mostra que consigo construir sites com foco na <strong>experiência do usuário</strong>, estética agradável e funcionalidades úteis para o dia a dia de pequenos negócios.</p>
+
+      <h3>Tecnologias utilizadas:</h3>
+      <ul>
+        <li>🧩 HTML5 (estrutura e semântica)</li>
+        <li>🎨 CSS3 (layout, responsividade e estilos modernos)</li>
+        <li>📱 JavaScript (lógica de pedido, soma de preços e integração com WhatsApp)</li>
+        <li>🧰 Flexbox e Media Queries (responsividade total)</li>
+        <li>🧠 Boas práticas de semântica, usabilidade e organização visual</li>
+      </ul>
+
+      <p>Criei este site para contar um pouco da minha trajetória e mostrar, de forma prática, os resultados do que venho aprendendo. Cada parte foi feita com atenção: da organização do conteúdo à responsividade. Isso prova que consigo planejar, montar e dar vida a um projeto do zero, com foco em funcionalidade e boa experiência.</p>
+
+      <p>Estou em constante evolução, e esse projeto é uma prova real do meu progresso como desenvolvedor. A cada linha de código, estou construindo não só um site, mas também o meu próprio futuro com paixão e dedicação.</p>
+    </section>
+
+    <section id="conteudo">
+      <h2>Conteúdo Desenvolvido</h2>
+      <p>Um dos meus projetos mais recentes foi o desenvolvimento do site <strong>"Lanche do Luz"</strong>, criado com base no que aprendi até agora. Nesse projeto, apliquei meus conhecimentos para criar uma plataforma onde os usuários podem montar pedidos de porções e enviá-los diretamente via WhatsApp.</p>
+      <p>O site possui uma barra lateral fixa, botões interativos, rolagem suave e layout totalmente responsivo. Utilizei elementos semânticos como <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> e <code>&lt;footer&gt;</code> para garantir uma estrutura clara e organizada. O uso de Flexbox e Media Queries permitiu adaptar o layout para diferentes tamanhos de tela, garantindo acessibilidade em dispositivos móveis e desktops.</p>
+      <p>O projeto demonstra minha capacidade de construir interfaces práticas, agradáveis e eficazes, sempre com foco na experiência do usuário e na funcionalidade.</p>
+
+      <h3>Tecnologias Utilizadas:</h3>
+      <ul>
+        <li>🧩 HTML5 (estrutura e semântica)</li>
+        <li>🎨 CSS3 (estilização, Flexbox e responsividade)</li>
+        <li>📱 JavaScript (lógica de pedidos, cálculo de preços e integração com WhatsApp)</li>
+        <li>🧠 Boas práticas de usabilidade e acessibilidade</li>
+      </ul>
+
+      <p>Esse projeto é uma prova do meu comprometimento com o aprendizado contínuo e minha capacidade de colocar o conhecimento em prática de forma eficiente.</p>
+    </section>
+
+    <section id="conclusao">
+      <h2>Conclusão</h2>
+      <p>Tenho muito orgulho da minha trajetória até aqui. A prática constante com projetos objetivos me ensinou a estruturar sites modernos, organizados e úteis. Com dedicação, consegui montar interfaces completas, funcionais e pensadas para o usuário.</p>
+      <p>Juntamente com amigos, estou dando os primeiros passos para fundar a <strong>LusTech Solutions</strong>, uma empresa com foco em soluções digitais acessíveis para empresas de todos os portes. Nossa missão é oferecer cursos, desenvolver sistemas e contribuir com o crescimento da internet e da educação tecnológica.</p>
+      <p>Estou em busca de uma oportunidade de trabalho efetiva, onde possa contribuir com meus conhecimentos, crescer profissionalmente e aprender com outros desenvolvedores. Tenho certeza de que posso agregar valor a qualquer equipe com minha paixão por tecnologia e meu compromisso com a excelência.</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 - Desenvolvido por André Luz</p>
+    </footer>
+  </main>
+
+</body>
+</html>
