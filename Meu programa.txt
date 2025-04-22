@@ -78,10 +78,11 @@
       border-radius: 8px;
     }
 
-      @media (max-width: 768px) {}
+    @media (max-width: 768px) {
       body {
         flex-direction: column;
       }
+
       aside {
         width: 100%;
         position: static;
@@ -91,44 +92,97 @@
       main {
         margin-left: 0;
       }
-      h1 {
-  -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-}
-
-@-webkit-keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-    transform: translateZ(-700px);
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-    transform: translateZ(0);
-  }
-}
-
-@keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-    transform: translateZ(-700px);
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
-    transform: translateZ(0);
-  }
-      
-
     }
+
+    h1 {
+      -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+      animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+
+    @-webkit-keyframes tracking-in-expand-fwd {
+      0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+        transform: translateZ(-700px);
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        letter-spacing: normal;
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+
+    @keyframes tracking-in-expand-fwd {
+      0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+        transform: translateZ(-700px);
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        letter-spacing: normal;
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+
+    .foto-perfil {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 40px auto 20px auto;
+      display: block;
+      border: 4px solid #3498db;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .zoom-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.zoom-conteudo {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #fff;
+  animation: zoom-in 0.4s ease;
+}
+
+.fechar {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fechar:hover {
+  color: #bbb;
+}
+
+@keyframes zoom-in {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
   </style>
 </head>
 <body>
@@ -144,10 +198,20 @@
   </aside>
 
   <main>
+    
+   <img src="imagem andre.jpeg" alt="Foto de André Luz" class="foto-perfil" onclick="abrirZoom(this)">
+
+
+<div id="zoomModal" class="zoom-modal">
+  <span class="fechar" onclick="fecharZoom()">&times;</span>
+  <img class="zoom-conteudo" id="imagemExpandida" src="" alt="Imagem Ampliada">
+</div>
+
+
+
     <header>
       <h1>Tabela de Aprendizado</h1>
     </header>
-
     <section id="introducao">
       <h2>Introdução</h2>
       <p>Olá! Me chamo André Luz, tenho 18 anos e estou em processo de formação em Análise e Desenvolvimento de Sistemas. Estou constantemente em busca de crescimento, aprimorando minhas habilidades e enfrentando novos desafios com dedicação.</p>
@@ -216,6 +280,40 @@
       <p>&copy; 2025 - Desenvolvido por André Luz</p>
     </footer>
   </main>
+
+
+
+
+
+
+<script>
+  function abrirZoom(imagem) {
+    const modal = document.getElementById("zoomModal");
+    const modalImg = document.getElementById("imagemExpandida");
+    modal.style.display = "block";
+    modalImg.src = imagem.src;
+  }
+
+  function fecharZoom() {
+    document.getElementById("zoomModal").style.display = "none";
+  }
+
+  // Fechar clicando fora da imagem
+  window.onclick = function(event) {
+    const modal = document.getElementById("zoomModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+
+
+
+
+
+
+
 
 </body>
 </html>
